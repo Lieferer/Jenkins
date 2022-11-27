@@ -1,2 +1,2 @@
 ---
-for triggering jenkins
+for triggering jenkins.
