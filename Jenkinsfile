@@ -19,7 +19,7 @@ pipeline {
         stage('Deliver') {
             steps {
                 echo 'Deliver....'
-                echo 'The build ID is ${BUILD_ID} and workspace path is ${WORKSPACE}'
+                echo 'The build ID is ${env.BUILD_ID} and workspace path is ${env.WORKSPACE}'
             }
         }
     }
