@@ -41,9 +41,10 @@ pipeline {
             }
             }
         }
-    }
     post {
         always {
             echo 'The Build has been completed'
         }
         }
+    }
+
