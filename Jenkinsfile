@@ -1,4 +1,8 @@
 pipeline {
+    environment {
+    //First variable
+    doError = '1'
+    }
     agent any
     triggers {
         pollSCM 'H/2 * * * *'
@@ -22,7 +26,7 @@ pipeline {
         }
     post {
         always {
-        echo 'The Build has been completed'
+            echo 'The Build has been completed'
         }
 
         }
