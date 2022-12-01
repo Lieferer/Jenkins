@@ -24,11 +24,10 @@ pipeline {
                 echo "The build ID is ${env.BUILD_ID} and workspace path is ${env.WORKSPACE}"
             }
         }
+    }
     post {
         always {
             echo 'The Build has been completed'
         }
-
         }
-    }
 }
