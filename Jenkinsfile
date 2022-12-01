@@ -24,6 +24,20 @@ pipeline {
                 echo "The build ID is ${env.BUILD_ID} and workspace path is ${env.WORKSPACE}"
             }
         }
+        stage('Error_Check'){
+            when{
+                expression { doError == '1' }
+                }
+            steps {
+                echo 'Build was not successful'
+                }
+            when{
+                expression { doError == '0'}
+            steps {
+                echo 'Build was successful!'
+            }
+            }
+        }
     }
     post {
         failure {
