@@ -1,11 +1,7 @@
 pipeline {
     agent any
-    environment
     triggers {
         pollSCM 'H/2 * * * *'
-    }
-    when {
-
     }
     stages {
         stage('Build') {
@@ -26,9 +22,9 @@ pipeline {
         }
     post {
         always {
-          echo 'The Build has been completed'  
+        echo 'The Build has been completed'
         }
 
-    }
+        }
     }
 }
