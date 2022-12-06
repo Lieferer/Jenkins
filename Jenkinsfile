@@ -1,7 +1,7 @@
 pipeline {
     environment {
     //First variable
-    doError = '0'
+    doError = '1'
     }
     agent any
     triggers {
