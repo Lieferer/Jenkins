@@ -43,14 +43,14 @@ pipeline {
         }
     post {
         always {
-            echo 'This is displayed always'
+            error 'This is displayed always'
         }
         success {
             echo 'The Build has been completed'
         }
         failure {
-            error 'The Build was a mess :-('
-        }    
+            echo 'The Build was a mess :-('
+        }
         }
     }
 
