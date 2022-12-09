@@ -40,6 +40,7 @@ pipeline {
                 echo 'Build was successful!'
             }
             }
+        error("Build failed because of this and that..")
         }
     post {
         success {
