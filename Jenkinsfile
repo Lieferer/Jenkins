@@ -40,18 +40,17 @@ pipeline {
                 echo 'Build was successful!'
             }
             }
-        error("Build failed because of this and that..")
         }
     post {
+        always {
+            echo 'This is displayed always'
+        }
         success {
             echo 'The Build has been completed'
         }
         failure {
-            echo 'The Build was a mess :-('
-        }
-        always {
-            echo 'This is displayed always'
-        }
+            error 'The Build was a mess :-('
+        }    
         }
     }
 
