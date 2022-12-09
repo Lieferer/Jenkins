@@ -34,7 +34,7 @@ pipeline {
         }
         stage('Successful') {
             when{
-                expression { doError == '0'
+                expression { doError == '0'}
             }
             steps {
                 echo 'Build was successful!'
