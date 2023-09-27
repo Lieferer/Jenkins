@@ -12,7 +12,7 @@ pipeline {
             steps {
                 echo "Building and cleaning workspace first.."
                 cleanWs()
-                writeFile(file: "c:/temp/File.txt", text: "First created File")
+                writeFile(file: "c:/temp/File.txt", text: "First create File")
                 script {zip zipFile: 'artifact.zip', archive: false }
             }
         }
