@@ -11,6 +11,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Building.."
+                writeFile(file: "c:/temp/File.txt", text: "First created File")
+                zip zipfile: 'artifact.zip', archive: false, dir: 'c:/temp', file: 'file.txt' 
             }
         }
         stage('Test') {
@@ -47,8 +49,6 @@ pipeline {
         }
         success {
             echo 'The Build has been completed'
-            writeFile(file: "c:/temp/File.txt", text: "First created File")
-            zip zipfile: 'artifact.zip', archive: false, dir: 'c:/temp', file: file.txt 
         }
         failure {
             error 'The Build was a mess :-('
