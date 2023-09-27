@@ -13,7 +13,7 @@ pipeline {
                 echo "Building and cleaning workspace first.."
                 cleanWs()
                 writeFile(file: "c:/temp/File.txt", text: "First created File")
-                script {zip zipFile: 'c:/temp/artifact.zip', archive: false, dir: 'c:/temp', file: 'file.txt' }
+                script {zip zipFile: 'c:/temp/artifact.zip', archive: false, file: 'c:/temp/file.txt' }
             }
         }
         stage('Test') {
