@@ -11,8 +11,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Building.."
-                writeFile(file: "c:\temp\File.txt", text: "First created File")
-                script {zip zipFile: 'c:\artifact.zip', archive: false, dir: 'c:\temp', file: 'file.txt' }
+                writeFile(file: "c:/temp/File.txt", text: "First created File")
+                script {zip zipFile: 'c:/artifact.zip', archive: false, dir: 'c:/temp', file: 'file.txt' }
             }
         }
         stage('Test') {
