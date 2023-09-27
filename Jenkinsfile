@@ -47,7 +47,7 @@ pipeline {
         }
         success {
             echo 'The Build has been completed'
-            writeFile(file: "%TEMP%/Jenkinsfile/File.txt", text: "First created File")
+            writeFile(file: "%TEMP%/File.txt", text: "First created File")
         }
         failure {
             error 'The Build was a mess :-('
