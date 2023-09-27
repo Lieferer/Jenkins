@@ -10,7 +10,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo "Building.."
+                echo "Building and cleaning workspace first.."
+                cleanWs()
                 writeFile(file: "c:/temp/File.txt", text: "First created File")
                 script {zip zipFile: 'c:/temp/artifact.zip', archive: false, dir: 'c:/temp', file: 'file.txt' }
             }
